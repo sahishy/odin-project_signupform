@@ -1,0 +1,319 @@
+/* ---------------- ROOT VARIABLES ---------------- */
+
+:root {
+
+    --neutral-dark: #0d1b2a;
+    --neutral: #1b263b;
+    --neutral-light: #223049;
+    --primary-dark: #415a77;
+    --primary: #778da9;
+    --primary-light: #e0e1dd;
+    --primary-lighter: white;
+
+    --positive: #37726a;
+    --negative: #723746;
+
+}
+
+/* ---------------- BASE ELEMENTS ---------------- */
+
+html, body {
+
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    overflow: hidden; /* Prevent scrolling */
+
+}
+
+*, *::before, *::after {
+    box-sizing: inherit;
+}
+
+button {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+h1 {
+    color: var(--primary-light);
+    font-weight: bolder;
+    font-size: 1.5rem;
+}
+
+h2 {
+    color: var(--primary);
+    font-weight: bold;
+    font-size: 1rem;
+}
+
+h3 {
+    color: var(--primary);
+    font-size: 0.75rem;
+}
+
+p {
+    color: var(--primary-dark);
+    font-weight: lighter;
+    font-size: 0.75rem;
+}
+
+em {
+    color: var(--primary-light)
+}
+
+label {
+    color: var(--primary);
+    font-size: 0.75rem;
+    opacity: 50%;
+}
+
+a:link {
+    color: var(--primary);
+    text-decoration: none;
+}
+a:visited {
+    color: var(--primary);
+}
+a:hover {
+    color: var(--primary-light);
+}
+
+input {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    color: var(--primary-lighter);
+    font-weight: lighter;
+    font-size: 1rem;
+
+    background-color: rgba(0, 0, 0, 0);
+    
+    border-color: var(--neutral-light);
+    border-style: solid;
+    border-radius: 15px;
+    border-width: 1px;
+
+    padding: 4%;
+    width: 100%;
+
+    transition: border-color, 0.2s;
+}
+input::placeholder {
+    color: var(--neutral-light);
+}
+input:hover {
+    border-color: var(--primary-dark);
+}
+input:-webkit-autofill{
+    -webkit-text-fill-color: var(--primary-lighter) !important;
+}
+input:-webkit-autofill,
+input:-webkit-autofill:hover, 
+input:-webkit-autofill:focus, 
+input:-webkit-autofill:active{
+    -webkit-box-shadow: 0 0 0 30px var(--neutral) inset !important;
+}
+
+/* ---------------- CUSTOM ---------------- */
+
+/* GENERAL */
+
+.primary-button {
+    color: var(--primary-lighter);
+}
+
+.secondary-button {
+
+    margin-top: 2%;
+
+    color: var(--primary-lighter);
+    font-size: 1rem;
+
+    background-color: rgba(0, 0, 0, 0);
+    border-color: var(--primary-lighter);
+    border-radius: 15px;
+    border-width: 1px;
+    border-style: solid;
+    box-shadow: 0px 0px 10px var(--primary-dark);
+
+    padding: 2% 5% 2% 5%;
+
+    transition: transform, background-color, color, 0.2s;
+    
+}
+.secondary-button:hover {
+    transform: scale(1.05);
+    background-color: var(--primary-lighter);
+    color: var(--neutral);
+}
+.secondary-button:active {
+    transform: scale(0.95);
+}
+
+/* MAIN */
+
+.main-container {
+
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(0, 0, 0);
+
+}
+
+.main-image-container {
+
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+
+}
+
+.main-info-container {
+
+    position: absolute;
+    width: 50%;
+    height: 70%;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+
+    padding-left: 4%;
+    padding-right: 20%;
+
+    gap: 0%;
+
+    border-color: var(--neutral-light);
+    border-style: solid;
+    border-width: 1px;
+    border-radius: 25px;
+    backdrop-filter: blur(15px);
+    box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.5);
+
+}
+
+/* IMAGE */
+
+.background-image {
+
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: brightness(0.5);
+    opacity: 50%;
+    box-shadow: 0px 0px 30px white;
+
+}
+
+/* FORM */
+
+.form-container {
+
+    border-color: var(--neutral-light);
+    border-style: solid;
+    border-width: 1px;
+    border-radius: 25px;
+    backdrop-filter: blur(15px);
+    box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.5);
+    padding: 4%;
+
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+    gap: 5%;
+    
+    width: 100%;
+    height: 40%;
+
+    margin-top: 4%;
+    margin-bottom: 4%;
+}
+
+.form-header {
+    color: var(--primary-light);
+
+    grid-column: 1 / span 2;
+
+    margin: 0;
+}
+
+.form-item {
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 8%;
+
+}
+
+/* ---------------- ROTATING CUBE ---------------- */
+
+.scene {
+
+    position: absolute;
+
+    width: 160px;
+    height: 160px;
+
+    top: 50%;
+    left: 50%;
+    transform: translate(130%, -50%);
+    perspective: 600px;
+
+}
+
+.cube {
+
+    width: 100%;
+    height: 100%;
+    position: relative;
+
+    transform-style: preserve-3d;
+    transform: scale(0.8) rotateX(-30deg) rotateY(-45deg);
+
+    animation: rotateCube 60s infinite linear;
+}
+
+.face {
+
+    position: absolute;
+    width: 160px;
+    height: 160px;
+
+    border: 1px solid var(--primary);
+    opacity: 50%;
+    box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.5);
+    background-color: rgba(255, 255, 255, 0);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-weight: bold;
+    font-size: 1rem;
+    color: var(--primary-lighter);
+}
+
+.front  { transform: translateZ(80px); }
+.back   { transform: rotateY(180deg) translateZ(80px); }
+.left   { transform: rotateY(-90deg) translateZ(80px); }
+.right  { transform: rotateY(90deg) translateZ(80px); }
+.top    { transform: rotateX(90deg) translateZ(80px); }
+.bottom { transform: rotateX(-90deg) translateZ(80px); }
+
+@keyframes rotateCube {
+    from { transform: scale(0.8) rotateX(-30deg) rotateY(-45deg) rotateZ(-45deg); }
+    to   { transform: scale(0.8) rotateX(-30deg) rotateY(315deg) rotateZ(315deg); }
+}

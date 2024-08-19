@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>sahish | Sign Up</title>
+
+    <link rel="stylesheet" href="styles.css">
+</head>
+    <body>
+        
+        <div class="main-container">
+
+            <div class="main-image-container">
+                <img src="images/bg.jpg" class="background-image">
+            </div>
+
+            <div class="main-info-container">
+
+                <h1>
+                    This is not a real online service!
+                </h1>
+
+                <h2>
+                    You know you need something like this in your life to help you realize your deepest dreams. Sign up <em>now</em> to get started. 
+
+                    <br><br>
+                    
+                    You <em>know</em> you want to.
+                </h2>
+
+                <form id="form" action="home.html" class="form-container">
+
+                    <h2 class="form-header">Let's do this!</h2>
+                    
+                    <div class="form-item">
+                        <label for="first_name">FIRST NAME*</label>
+                        <input type="text" id="first_name" name="first_name" placeholder="John" oninput="nameCheck()" required>
+                    </div>
+
+                    <div class="form-item">
+                        <label for="last_name">LAST NAME*</label>
+                        <input type="text" id="last_name" name="last_name" placeholder="Doe" oninput="nameCheck()" required>
+                    </div>
+
+                    <div class="form-item">
+                        <label for="email">EMAIL*</label>
+                        <input type="email" id="email" name="email" placeholder="john.doe@email.com" pattern=".+@.+\..+" oninput="emailCheck()" required>
+                    </div>
+
+                    <div class="form-item">
+                        <label for="phone_number">PHONE NUMBER*</label>
+                        <input type="tel" id="phone_number" name="phone_number" placeholder="(123) 456-7890" pattern="\([0-9]{3}\) [0-9]{3}-[0-9]{4}" maxlength="14" oninput="phoneNumberCheck()" required>
+                    </div>
+
+                    <div class="form-item">
+                        <label for="password">PASSWORD*</label>
+                        <input type="password" id="password" name="password" placeholder="Password" oninput="passwordCheck()" required>
+                    </div>
+
+                    <div class="form-item">
+                        <label for="confirm_password">CONFIRM PASSWORD*</label>
+                        <input type="password" id="confirm_password" name="confirm_password" placeholder="Confirm Password" oninput="passwordCheck()" required>
+                    </div>
+
+                </form>
+
+                <button type="submit" form="form" class="secondary-button">Create Account</button>
+
+                <p>
+                    Already have an account? <a href="index.html">Log in</a>
+                </p>
+            </div>
+
+            <div class="scene">
+                <div class="cube">
+
+                    <div class="face front">sahish</div>
+                    <div class="face back"></div>
+                    <div class="face left"></div>
+                    <div class="face right"></div>
+                    <div class="face top"></div>
+                    <div class="face bottom"></div>
+                    
+                </div>
+            </div>
+
+        </div>
+
+    </body>
+
+    <script src="script.js"></script>
+
+</html>
